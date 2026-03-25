@@ -9,8 +9,6 @@ const navItems = [
   { label: "Ekonomi", path: "/ekonomi" },
   { label: "Dünya", path: "/dunya" },
   { label: "Savunma", path: "/savunma" },
-  { label: "Video", path: "/video" },
-  { label: "Yazarlar", path: "/yazarlar" },
 ];
 
 const Header = () => {
