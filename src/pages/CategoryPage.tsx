@@ -160,6 +160,17 @@ const CategoryPage = () => {
     );
   }
 
+  if (slug === "ekonomi") {
+    return (
+      <RSSCategoryPage
+        feed="ekonomi"
+        title="EKONOMİ"
+        description="Piyasalar, finans, iş dünyası ve makroekonomi gelişmeleri."
+        sourceLabel="Bloomberg HT"
+      />
+    );
+  }
+
   const category = categories[slug || "siyaset"];
 
   if (!category) {
