@@ -10,6 +10,7 @@ const RSS_FEEDS: Record<string, string> = {
   sondakika: "https://www.trthaber.com/sondakika.rss",
   ekonomi: "https://www.bloomberght.com/rss",
   dunya: "https://feeds.bbci.co.uk/turkce/rss.xml",
+  savunma: "https://mavisavunma.com/feed/",
 };
 
 function parseRSSItems(xml: string): Array<{ title: string; link: string; pubDate: string; description: string; image: string }> {
