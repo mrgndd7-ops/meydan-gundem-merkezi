@@ -15,6 +15,7 @@ const RSS_FEEDS: Record<string, string> = {
   ekonomi: 'https://www.bloomberght.com/rss',
   dunya: 'https://feeds.bbci.co.uk/turkce/rss.xml',
   savunma: 'https://mavisavunma.com/feed/',
+  siyaset: 'https://www.ahaber.com.tr/rss/gundem.xml',
 };
 
 async function fetchRSSFeed(feedKey: string): Promise<RSSItem[]> {
