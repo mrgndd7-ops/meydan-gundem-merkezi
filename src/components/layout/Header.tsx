@@ -5,11 +5,11 @@ import { useState } from "react";
 const navItems = [
   { label: "Gündem", path: "/" },
   { label: "Siyaset", path: "/siyaset" },
-  { label: "Ekonomi", path: "#" },
-  { label: "Dünya", path: "#" },
-  { label: "Savunma", path: "#" },
-  { label: "Video", path: "#" },
-  { label: "Yazarlar", path: "#" },
+  { label: "Ekonomi", path: "/ekonomi" },
+  { label: "Dünya", path: "/dunya" },
+  { label: "Savunma", path: "/savunma" },
+  { label: "Video", path: "/video" },
+  { label: "Yazarlar", path: "/yazarlar" },
 ];
 
 const Header = () => {
