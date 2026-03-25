@@ -11,15 +11,13 @@ const Footer = () => {
             <img src={meydanLogo} alt="MEYDAN" className="h-12 w-auto brightness-0 invert" />
           </Link>
           <p className="text-primary-foreground/70 font-medium text-lg max-w-xl">
-            Gündemin merkezi, doğrunun sesi. Modern Türkiye'nin dijital haber meydanı.
+            Gündemin merkezi, doğruunun sesi. Modern Türkiye’nin dijital haber meydанı.
           </p>
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm">
-            <a className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity" href="#">Künye</a>
-            <a className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity" href="#">Gizlilik</a>
-            <a className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity" href="#">İletişim</a>
-            <a className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity" href="#">Reklam</a>
-            <a className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity" href="#">RSS</a>
-            <a className="text-primary-foreground underline font-bold" href="#">Abone Ol</a>
+            <Link to="/kunye" className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity">Künye</Link>
+            <Link to="/kvkk-aydinlatma" className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity">Gizlilik</Link>
+            <Link to="/cerez-politikasi" className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity">Çerez Politikası</Link>
+            <a href="mailto:iletisim@meydanmedya.com.tr" className="text-primary-foreground/70 hover:text-primary-foreground transition-opacity">İletişim</a>
           </nav>
           <div className="flex space-x-6">
             <Globe className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform" />
