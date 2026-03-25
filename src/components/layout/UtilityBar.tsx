@@ -2,18 +2,16 @@ import { Cloud, TrendingDown, TrendingUp, Radio } from 'lucide-react';
 import { useMarketData } from '@/hooks/useMarketData';
 
 const fmt = (n: number | undefined) =>
-  n != null ? n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—';
+  n != null && n > 0
+    ? n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    : '—';
 
-const RateItem = ({ label, value, change }: { label: string; value: number | undefined; change: number | undefined }) => {
-  const up = (change ?? 0) >= 0;
-  return (
-    <div className='flex items-center space-x-1'>
-      <span className='font-bold'>{label}</span>
-      <span className={up ? 'text-success' : 'text-secondary'}>{fmt(value)}</span>
-      {up ? <TrendingUp className='w-3 h-3 text-success' /> : <TrendingDown className='w-3 h-3 text-secondary' />}
-    </div>
-  );
-};
+const RateItem = ({ label, value }: { label: string; value: number | undefined }) => (
+  <div className='flex items-center space-x-1'>
+    <span className='font-bold'>{label}</span>
+    <span className='text-foreground'>{fmt(value)}</span>
+  </div>
+);
 
 const UtilityBar = () => {
   const { data } = useMarketData();
@@ -27,9 +25,9 @@ const UtilityBar = () => {
             <span>Ankara 18°C</span>
           </div>
           <div className='flex items-center space-x-4 border-l border-outline-variant/30 pl-4'>
-            <RateItem label='USD' value={data?.usd?.selling} change={data?.usd?.change} />
-            <RateItem label='EUR' value={data?.eur?.selling} change={data?.eur?.change} />
-            <RateItem label='ALTIN' value={data?.gold?.selling} change={data?.gold?.change} />
+            <RateItem label='USD/TRY' value={data?.usd?.selling} />
+            <RateItem label='EUR/TRY' value={data?.eur?.selling} />
+            <RateItem label='ALTIN (g)' value={data?.gold?.selling} />
           </div>
         </div>
         <div className='flex items-center space-x-4'>
