@@ -8,6 +8,7 @@ import ArticlePage from "./pages/ArticlePage.tsx";
 import CategoryPage from "./pages/CategoryPage.tsx";
 import CerezPolitikasi from "./pages/CerezPolitikasi.tsx";
 import KVKKAydinlatma from "./pages/KVKKAydinlatma.tsx";
+import Kunye from "./pages/Kunye.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/haber/:slug" element={<ArticlePage />} />
           <Route path="/cerez-politikasi" element={<CerezPolitikasi />} />
           <Route path="/kvkk-aydinlatma" element={<KVKKAydinlatma />} />
+          <Route path="/kunye" element={<Kunye />} />
           <Route path="/:slug" element={<CategoryPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
