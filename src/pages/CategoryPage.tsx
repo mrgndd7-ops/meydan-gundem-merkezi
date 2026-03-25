@@ -149,6 +149,17 @@ const CategoryPage = () => {
     );
   }
 
+  if (slug === "siyaset") {
+    return (
+      <RSSCategoryPage
+        feed="siyaset"
+        title="SİYASET"
+        description="Türkiye siyasetinde günün öne çıkan gelişmeleri, analizler ve yorumlar."
+        sourceLabel="A Haber"
+      />
+    );
+  }
+
   const category = categories[slug || "siyaset"];
 
   if (!category) {
