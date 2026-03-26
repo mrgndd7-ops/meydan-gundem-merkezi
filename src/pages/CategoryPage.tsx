@@ -166,7 +166,7 @@ const CategoryPage = () => {
         feed="savunma"
         title="SAVUNMA"
         description="Milli savunma sanayii, TSK operasyonları ve güvenlik gelişmeleri."
-        sourceLabel="Mavi Savunma"
+        sourceLabel="Savunma Sanayist"
       />
     );
   }
