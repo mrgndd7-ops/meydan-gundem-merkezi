@@ -1,4 +1,4 @@
-import type { WeatherData } from '../../types/weather';
+import type { WeatherData } from '../../types/weather.js';
 
 const TTL_MS = 10 * 60 * 1000; // 10 dakika
 
