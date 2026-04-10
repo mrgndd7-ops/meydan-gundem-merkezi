@@ -1,4 +1,4 @@
-import type { City, WeatherData } from '../../types/weather';
+import type { City, WeatherData } from '../../types/weather.js';
 
 // WMO weather code → Türkçe durum metni
 const CONDITION_MAP: Record<number, string> = {
